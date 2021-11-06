@@ -1,0 +1,13 @@
+<!-- when the informaton from the form goes to the back end than it will show a key and the key will connect with the name on the form-->
+<!-- method = the http verb(what we want to happen when we submit the form) -->
+<!-- action= the url pattern of the route that we want the date to be sent to -->
+<form method="POST" action="/dinosaurs">
+    <label for="dinosaurName">Name</label>
+    <!-- the for and the id need to be the same -->
+    <input type="text" id="dinosaurName" name="name">
+
+    <label for="dinosaurType">Type</label>
+    <input type="text" id="dinosaurType" name="type">
+
+    <input type="submit" value="Add a Dino">
+</form>

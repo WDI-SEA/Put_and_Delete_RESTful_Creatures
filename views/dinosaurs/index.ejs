@@ -1,0 +1,19 @@
+<form action="/dinosaurs" method="GET">
+    <label for="nameFilter">Filter By Name</label>
+    <input type="text" name="nameFilter" id="nameFilter">
+    <input type="submit">
+</form>
+
+<ul>
+    <% dinoData.forEach((dino, index)=> { %>
+        <li>
+            <%= dino.name %> is a <%= dino.type %>
+            <!-- reason to use form. to expolit the browsers form functionality -->
+            <!--/?_method=DELETE changes the method from a post request to a delete request  -->
+            <!-- method can only be GET or POST -->
+            <form action="/dinosaurs/<%= index %>/?_method=DELETE" method="POST">
+                <input type="submit" value="Delete">
+            </form>
+        </li>
+    <% }) %>
+</ul>
