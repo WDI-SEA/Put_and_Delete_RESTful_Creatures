@@ -17,7 +17,6 @@ router.get('/', (req, res)=> {
     res.render('dinosaurs/index.ejs', {dinoData})
 })
 
-
 // New Route
 router.get('/new', (req, res)=> {
     res.render('dinosaurs/new.ejs')
@@ -42,7 +41,6 @@ router.put('/:idx', (req, res)=> {
     fs.writeFileSync('./dinosaurs.json', JSON.stringify(dinoData))
     res.redirect('/dinosaurs')
 })
-
 
 // Show Route
 router.get('/:idx', (req, res)=> {

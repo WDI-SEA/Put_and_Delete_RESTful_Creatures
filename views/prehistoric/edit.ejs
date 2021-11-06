@@ -1,0 +1,10 @@
+<form action="/prehistoric/<%= prehistoricID  %>/?_method=PUT " method="POST">
+    <label for="prehistoricType">Type</label>
+    <!-- the for and the id need to be the same -->
+    <input type="text" id="prehistoricType" name="type" value="<%= prehistoric.type  %> ">
+
+    <label for="prehistoricImgUrl">Image URL</label>
+    <input type="text" id="prehistoricImgUrl" name="img_url" value="<%= prehistoric.imgUrl  %> ">
+
+    <input type="submit" value="update a prehistoric creature">
+</form>

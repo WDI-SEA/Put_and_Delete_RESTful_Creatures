@@ -1,8 +1,19 @@
+<form action="/prehistoric" method="GET">
+    <label for="typeFilter">Filter By Type</label>
+    <input type="text" name="typeFilter" id="typeFilter">
+    <input type="submit">
+</form>
+
 <ul>
-    <% prehistoricData.forEach((predino)=> { %>
+    <% prehistoricData.forEach((predino, index)=> { %>
         <li>
-            <%= predino.type %>
-            <img src="<%= predino.img_url %>" alt="image of a prehistoric creater">
+            <h2>
+                <%= predino.type %>
+            </h2>
+            <img width="600" src="<%= predino.img_url %>" alt="image of a prehistoric creater">
+            <form action="/prehistoric/<%= index %>/?_method=DELETE" method="POST">
+                <input type="submit" value="Delete">
+            </form>
         </li>
     <% }) %>
 </ul>

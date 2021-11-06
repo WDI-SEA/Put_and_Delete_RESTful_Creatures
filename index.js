@@ -1,7 +1,7 @@
 const express = require('express')
 const app = express()
 const ejsLayouts = require('express-ejs-layouts')
-const fs = require('fs')
+// const fs = require('fs')
 const methodOverride = require('method-override')
 
 // middleware
