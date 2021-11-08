@@ -76,12 +76,6 @@ MacBook-Air:frasier-routes ebarw$ code .
 
 
 
-
-
-
-
-
-
 Last login: Tue Nov  2 16:29:33 on ttys000
 
 The default interactive shell is now zsh.
